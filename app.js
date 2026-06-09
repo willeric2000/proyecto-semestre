@@ -1,108 +1,185 @@
-const cards = document.querySelectorAll(".card");
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
 
-const mostrarCards = () => {
-  cards.forEach((card) => {
-    const posicion = card.getBoundingClientRect().top;
-    const pantalla = window.innerHeight * 0.85;
+      const destino = document.querySelector(link.getAttribute("href"));
 
-    if (posicion < pantalla) {
-      card.style.opacity = "1";
-      card.style.transform = "translateY(0)";
-    }
-  });
-};
-
-cards.forEach((card) => {
-  card.style.opacity = "0";
-  card.style.transform = "translateY(50px)";
-  card.style.transition = "all 0.8s ease";
-});
-
-window.addEventListener("scroll", mostrarCards);
-mostrarCards();
-
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    navbar.style.transition = "0.3s";
-    navbar.style.boxShadow = "0 4px 15px rgba(0,0,0,0.3)";
-  } else {
-    navbar.style.boxShadow = "none";
-  }
-});
-
-cards.forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    card.style.transform = "translateY(-10px) scale(1.03)";
-    card.style.transition = "0.3s";
+      if (destino) {
+        destino.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
   });
 
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "translateY(0) scale(1)";
-  });
-});
+  const elementos = document.querySelectorAll(".card, h2, footer");
 
-document.querySelectorAll('a[href^="#"]').forEach((enlace) => {
-  enlace.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const destino = document.querySelector(this.getAttribute("href"));
-
-    if (destino) {
-      destino.scrollIntoView({
-        behavior: "smooth",
+  const observador = new IntersectionObserver(
+    (entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("show");
+        }
       });
+    },
+    {
+      threshold: 0.15,
+    },
+  );
+
+  elementos.forEach((item) => {
+    item.classList.add("reveal");
+    observador.observe(item);
+  });
+
+  const tarjetas = document.querySelectorAll(".card");
+
+  tarjetas.forEach((tarjeta) => {
+    tarjeta.addEventListener("mousemove", (e) => {
+      const rect = tarjeta.getBoundingClientRect();
+
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const giroX = (y / rect.height - 0.5) * -12;
+
+      const giroY = (x / rect.width - 0.5) * 12;
+
+      tarjeta.style.transform = `
+        perspective(1000px)
+        rotateX(${giroX}deg)
+        rotateY(${giroY}deg)
+        translateY(-8px)
+      `;
+    });
+
+    tarjeta.addEventListener("mouseleave", () => {
+      tarjeta.style.transform = `
+        perspective(1000px)
+        rotateX(0deg)
+        rotateY(0deg)
+        translateY(0)
+      `;
+    });
+  });
+
+  const barra = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+      barra.style.background = "rgba(13,110,253,.95)";
+
+      barra.style.backdropFilter = "blur(10px)";
+
+      barra.style.boxShadow = "0 8px 20px rgba(0,0,0,.15)";
+    } else {
+      barra.style.background = "";
+      barra.style.backdropFilter = "";
+      barra.style.boxShadow = "";
     }
   });
-});
 
-const hero = document.querySelector("section");
+  const portada = document.querySelector("section");
 
-hero.style.opacity = "0";
-hero.style.transform = "translateY(-30px)";
+  window.addEventListener("scroll", () => {
+    const desplazamiento = window.scrollY;
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    hero.style.transition = "1s";
-    hero.style.opacity = "1";
-    hero.style.transform = "translateY(0)";
-  }, 300);
-});
-const imagenes = document.querySelectorAll(".img-fluid");
-
-imagenes.forEach((img) => {
-  img.style.transition = "0.4s";
-
-  img.addEventListener("mouseenter", () => {
-    img.style.transform = "scale(1.05)";
+    portada.style.backgroundPositionY = `${desplazamiento * 0.4}px`;
   });
 
-  img.addEventListener("mouseleave", () => {
-    img.style.transform = "scale(1)";
+  document.querySelectorAll(".btn").forEach((boton) => {
+    boton.addEventListener("mousemove", (e) => {
+      const rect = boton.getBoundingClientRect();
+
+      const x = e.clientX - rect.left - rect.width / 2;
+
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      boton.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+    });
+
+    boton.addEventListener("mouseleave", () => {
+      boton.style.transform = "translate(0,0)";
+    });
   });
-});
 
-const card = document.querySelector(".card");
+  const titulo = document.querySelector("h1");
+  const texto = document.querySelector("section p");
+  const botonPrincipal = document.querySelector("section .btn");
 
-card.style.opacity = "0";
-card.style.transform = "translateY(40px)";
+  if (titulo) {
+    titulo.animate(
+      [
+        {
+          opacity: 0,
+          transform: "translateY(50px)",
+        },
+        {
+          opacity: 1,
+          transform: "translateY(0)",
+        },
+      ],
+      {
+        duration: 1000,
+        fill: "forwards",
+        easing: "ease-out",
+      },
+    );
+  }
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    card.style.transition = "0.8s";
-    card.style.opacity = "1";
-    card.style.transform = "translateY(0)";
-  }, 200);
-});
+  if (texto) {
+    texto.animate(
+      [
+        {
+          opacity: 0,
+          transform: "translateY(25px)",
+        },
+        {
+          opacity: 1,
+          transform: "translateY(0)",
+        },
+      ],
+      {
+        duration: 1200,
+        delay: 250,
+        fill: "forwards",
+        easing: "ease-out",
+      },
+    );
+  }
 
-const titulo = document.querySelector(".card-title");
+  if (botonPrincipal) {
+    botonPrincipal.animate(
+      [
+        {
+          opacity: 0,
+          transform: "translateY(20px)",
+        },
+        {
+          opacity: 1,
+          transform: "translateY(0)",
+        },
+      ],
+      {
+        duration: 1200,
+        delay: 500,
+        fill: "forwards",
+        easing: "ease-out",
+      },
+    );
+  }
 
-titulo.style.opacity = "0";
+  document.querySelectorAll(".card img").forEach((img) => {
+    img.addEventListener("mouseenter", () => {
+      img.style.transform = "scale(1.05)";
+      img.style.filter = "brightness(1.08) saturate(1.15)";
+    });
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    titulo.style.transition = "1s";
-    titulo.style.opacity = "1";
-  }, 600);
+    img.addEventListener("mouseleave", () => {
+      img.style.transform = "scale(1)";
+      img.style.filter = "";
+    });
+  });
 });
