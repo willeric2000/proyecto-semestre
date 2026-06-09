@@ -183,3 +183,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+const cardsColaboradores = document.querySelectorAll("#colaboradores .card");
+
+const observerColaboradores = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        cardsColaboradores.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("visible");
+          }, index * 300);
+        });
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  },
+);
+
+const seccionColaboradores = document.querySelector("#colaboradores");
+
+if (seccionColaboradores) {
+  observerColaboradores.observe(seccionColaboradores);
+}

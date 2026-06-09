@@ -220,3 +220,34 @@ section .card.h-100:hover img {
 .footer-container h6 {
   font-size: 17px;
 }
+#colaboradores .card {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease;
+}
+
+#colaboradores .card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#colaboradores .col:nth-child(1) .card {
+  transform: translateX(-100px);
+}
+
+#colaboradores .col:nth-child(2) .card {
+  transform: translateY(100px);
+}
+
+#colaboradores .col:nth-child(3) .card {
+  transform: translateX(100px);
+}
+
+#colaboradores .col:nth-child(4) .card {
+  transform: scale(0.7);
+}
+
+#colaboradores .card.visible {
+  opacity: 1;
+  transform: none;
+}
