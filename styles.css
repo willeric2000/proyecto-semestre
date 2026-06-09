@@ -1,5 +1,5 @@
 body {
-  background-color: #f5efd6 !important;
+  background-color: #f8ecbe !important;
 }
 section.bg-dark h1 {
   font-family: "Montserrat", sans-serif;
@@ -219,6 +219,9 @@ section .card.h-100:hover img {
 }
 .footer-container h6 {
   font-size: 17px;
+}
+footer {
+  margin-top: 160px;
 }
 #colaboradores .card {
   opacity: 0;

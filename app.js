@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const y = e.clientY - rect.top;
 
       const giroX = (y / rect.height - 0.5) * -12;
-
       const giroY = (x / rect.width - 0.5) * 12;
 
       tarjeta.style.transform = `
@@ -67,34 +66,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const barra = document.querySelector(".navbar");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 40) {
-      barra.style.background = "rgba(13,110,253,.95)";
-
-      barra.style.backdropFilter = "blur(10px)";
-
-      barra.style.boxShadow = "0 8px 20px rgba(0,0,0,.15)";
-    } else {
-      barra.style.background = "";
-      barra.style.backdropFilter = "";
-      barra.style.boxShadow = "";
-    }
-  });
-
-  const portada = document.querySelector("section");
-
-  window.addEventListener("scroll", () => {
-    const desplazamiento = window.scrollY;
-
-    portada.style.backgroundPositionY = `${desplazamiento * 0.4}px`;
-  });
+  if (barra) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 40) {
+        barra.style.background = "rgba(13,110,253,.95)";
+        barra.style.backdropFilter = "blur(10px)";
+        barra.style.boxShadow = "0 8px 20px rgba(0,0,0,.15)";
+      } else {
+        barra.style.background = "";
+        barra.style.backdropFilter = "";
+        barra.style.boxShadow = "";
+      }
+    });
+  }
 
   document.querySelectorAll(".btn").forEach((boton) => {
     boton.addEventListener("mousemove", (e) => {
       const rect = boton.getBoundingClientRect();
 
       const x = e.clientX - rect.left - rect.width / 2;
-
       const y = e.clientY - rect.top - rect.height / 2;
 
       boton.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
@@ -182,28 +172,29 @@ document.addEventListener("DOMContentLoaded", () => {
       img.style.filter = "";
     });
   });
-});
-const cardsColaboradores = document.querySelectorAll("#colaboradores .card");
 
-const observerColaboradores = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        cardsColaboradores.forEach((card, index) => {
-          setTimeout(() => {
-            card.classList.add("visible");
-          }, index * 300);
+  const cardsColaboradores = document.querySelectorAll("#colaboradores .card");
+
+  const seccionColaboradores = document.querySelector("#colaboradores");
+
+  if (seccionColaboradores) {
+    const observerColaboradores = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            cardsColaboradores.forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.add("visible");
+              }, index * 300);
+            });
+          }
         });
-      }
-    });
-  },
-  {
-    threshold: 0.2,
-  },
-);
+      },
+      {
+        threshold: 0.2,
+      },
+    );
 
-const seccionColaboradores = document.querySelector("#colaboradores");
-
-if (seccionColaboradores) {
-  observerColaboradores.observe(seccionColaboradores);
-}
+    observerColaboradores.observe(seccionColaboradores);
+  }
+});
