@@ -78,6 +78,7 @@ section.bg-dark .btn:hover {
   transition: all 0.4s ease;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   animation: fadeUp 1s ease;
+  margin-top: 100px;
 }
 
 .card:hover {
@@ -221,7 +222,7 @@ section .card.h-100:hover img {
   font-size: 17px;
 }
 footer {
-  margin-top: 160px;
+  margin-top: 250px;
   background-color: #f8ecbe;
 }
 
