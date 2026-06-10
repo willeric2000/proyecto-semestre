@@ -222,7 +222,9 @@ section .card.h-100:hover img {
 }
 footer {
   margin-top: 160px;
+  background-color: #f8ecbe;
 }
+
 #colaboradores .card {
   opacity: 0;
   transform: translateY(80px);
