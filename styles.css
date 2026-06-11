@@ -265,3 +265,6 @@ section.bg-dark h1 {
     transform: translateY(-8px);
   }
 }
+.gatoprincipal {
+  justify-content: center;
+}
