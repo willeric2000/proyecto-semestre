@@ -16,8 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-
-
 section.bg-dark {
   position: relative;
 }
@@ -244,4 +242,9 @@ section.bg-dark h1 {
   50% {
     transform: translateY(-8px);
   }
+}
+.navbar {
+  background-color: rgb(201, 201, 195) !important;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.8s ease;
 }
