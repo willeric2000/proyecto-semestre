@@ -78,6 +78,7 @@ section.bg-dark .btn:hover {
   transition: all 0.4s ease;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   animation: fadeUp 1s ease;
+  margin-top: 100px;
 }
 
 .card:hover {
@@ -221,36 +222,46 @@ section .card.h-100:hover img {
   font-size: 17px;
 }
 footer {
-  margin-top: 160px;
-}
-#colaboradores .card {
-  opacity: 0;
-  transform: translateY(80px);
-  transition: all 0.8s ease;
-}
-
-#colaboradores .card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#colaboradores .col:nth-child(1) .card {
-  transform: translateX(-100px);
-}
-
-#colaboradores .col:nth-child(2) .card {
-  transform: translateY(100px);
-}
-
-#colaboradores .col:nth-child(3) .card {
-  transform: translateX(100px);
-}
-
-#colaboradores .col:nth-child(4) .card {
-  transform: scale(0.7);
+  margin-top: 250px;
+  background-color: #f8ecbe;
 }
 
 #colaboradores .card.visible {
   opacity: 1;
   transform: none;
+}
+#cards .col:nth-child(1) .card {
+  animation-delay: 0.2s;
+}
+
+#cards .col:nth-child(2) .card {
+  animation-delay: 0.4s;
+}
+
+#cards .col:nth-child(3) .card {
+  animation-delay: 0.6s;
+}
+
+#cards .col:nth-child(4) .card {
+  animation-delay: 0.8s;
+}
+#colaboradores .card.visible {
+  opacity: 1;
+  transform: none;
+}
+section.bg-dark h1 {
+  animation:
+    fadeUp 1s ease,
+    flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
