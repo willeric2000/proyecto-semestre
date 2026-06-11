@@ -38,4 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (seccion) {
     observer.observe(seccion);
   }
+  let clicksVolver = 0;
+
+window.volverInicio = function () {
+  clicksVolver++;
+
+  if (clicksVolver === 1) {
+    alert("Probá de nuevo 😄");
+  } else {
+    window.location.href = "index.html";
+  }
+};
 });
