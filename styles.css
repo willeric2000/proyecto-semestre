@@ -1,5 +1,5 @@
 body {
-  background-color: #f8ecbe !important;
+  background-color: #f9e699 !important;
 }
 section.bg-dark h1 {
   font-family: "Montserrat", sans-serif;
@@ -245,7 +245,7 @@ section.bg-dark h1 {
   }
 }
 .navbar {
-  background-color: rgb(201, 201, 195) !important;
+  background-color: rgb(238, 238, 176) !important;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
   animation: slideDown 0.8s ease;
 }
