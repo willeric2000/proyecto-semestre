@@ -50,6 +50,7 @@ section.bg-dark .btn:hover {
 }
 
 .card {
+  background-color: rgb(249, 250, 247);
   border: none;
   border-radius: 18px;
   overflow: hidden;
