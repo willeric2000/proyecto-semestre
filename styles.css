@@ -16,28 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-.navbar {
-  background-color: rgb(201, 201, 195) !important;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
-  animation: slideDown 0.8s ease;
-}
-
-.navbar-brand {
-  transition: 0.3s;
-}
-
-.navbar-brand:hover {
-  transform: scale(1.08);
-}
-
-.navbar .btn {
-  transition: all 0.3s ease;
-}
-
-.navbar .btn:hover {
-  transform: translateY(-3px);
-}
-
 section.bg-dark {
   position: relative;
 }
@@ -72,6 +50,7 @@ section.bg-dark .btn:hover {
 }
 
 .card {
+  background-color: rgb(249, 250, 247);
   border: none;
   border-radius: 18px;
   overflow: hidden;
@@ -264,4 +243,9 @@ section.bg-dark h1 {
   50% {
     transform: translateY(-8px);
   }
+}
+.navbar {
+  background-color: rgb(201, 201, 195) !important;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.8s ease;
 }
