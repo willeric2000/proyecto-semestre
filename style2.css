@@ -106,15 +106,15 @@ h1::after {
   margin: 0;
 }
 .img-fluid {
-  opacity: 0;
-  transform: translateY(30px);
+  
+  
   transition: all 0.8s ease;
   cursor: pointer;
 }
 
-.img-fluid.visible {
-  opacity: 1;
-  transform: translateY(0);
+.img-fluid.hover {
+  
+  transform: scale(1,05);
 }
 
 .img-fluid:hover {
@@ -125,4 +125,19 @@ h1::after {
   transform: scale(1.5) !important;
   position: relative;
   z-index: 1000;
+}
+.short-container {
+  width: 100%;
+  max-width: 400px;
+  height: 700px;
+  margin: 20px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.short-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
