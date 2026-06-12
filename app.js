@@ -48,5 +48,20 @@ window.volverInicio = function () {
   } else {
     window.location.href = "index.html";
   }
+  
+window.addEventListener("load", () => {
+  document.querySelectorAll(".img-fluid").forEach((img) => {
+    img.classList.add("visible");
+  });
+});
+
+
+document.querySelectorAll(".img-fluid").forEach((img) => {
+  img.addEventListener("click", () => {
+    img.classList.toggle("zoom");
+  });
+});
+
+
 };
 });
