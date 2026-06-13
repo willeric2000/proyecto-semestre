@@ -18,13 +18,13 @@ body {
 section.bg-dark {
   position: relative;
 }
-
+/*esto oscurece la foto no sirve ajaj
 section.bg-dark::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
-}
+}*/
 
 section.bg-dark .container {
   position: relative;
