@@ -19,3 +19,61 @@
 .navbar .btn:hover {
   transform: translateY(-3px);
 }
+/* Fuente Principal */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8f9fa; /* Fondo gris claro muy limpio */
+}
+
+/* Tipografía de títulos */
+.main-title {
+  font-family: 'Montserrat', sans-serif;
+  color: #212529;
+}
+
+/* Estilos personalizados para las tarjetas */
+.custom-card {
+  width: 100%;
+  max-width: 360px;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto Hover: Eleva la tarjeta sutilmente */
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Contenedor de la Imagen dentro de la tarjeta */
+.card-img-container {
+  width: 100%;
+  height: 220px; /* Altura fija para que las 3 tarjetas se alineen perfectamente */
+  overflow: hidden;
+  background-color: #eaeaea;
+}
+
+/* Ajuste de la imagen para que rellene el espacio de forma proporcional */
+.custom-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Evita que la foto se estire o comprima */
+}
+
+/* Estilos del contenido interno de la tarjeta */
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
