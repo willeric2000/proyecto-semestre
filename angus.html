@@ -118,6 +118,410 @@
           </div>
         </div>
       </div>
+
+      <section class="container mt-5 pt-5">
+        <h3 class="text-center fw-bold mb-2 text-dark">
+          Datos Clave de Producción
+        </h3>
+        <p class="text-center text-muted mb-5">
+          Pasa el mouse o presiona las tarjetas para descubrir la información
+          técnica
+        </p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+          <div class="col d-flex justify-content-center">
+            <div class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div
+                  class="flip-card-front bg-white shadow-sm d-flex flex-column align-items-center justify-content-center p-4"
+                >
+                  <i
+                    class="bi bi-globe-americas text-primary display-4 mb-3"
+                  ></i>
+                  <h4 class="fw-bold h5 text-dark m-0">Adaptabilidad</h4>
+                </div>
+                <div
+                  class="flip-card-back bg-primary text-white d-flex flex-column align-items-center justify-content-center p-4 text-center"
+                >
+                  <h4 class="fw-bold h5 mb-2">Clima y Terreno</h4>
+                  <p class="small m-0">
+                    Soportan condiciones climáticas extremas, desde los
+                    inviernos más fríos hasta veranos intensos, manteniendo su
+                    rendimiento biológico.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center">
+            <div class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div
+                  class="flip-card-front bg-white shadow-sm d-flex flex-column align-items-center justify-content-center p-4"
+                >
+                  <i class="bi bi-speedometer text-success display-4 mb-3"></i>
+                  <h4 class="fw-bold h5 text-dark m-0">Peso Promedio</h4>
+                </div>
+                <div
+                  class="flip-card-back bg-success text-white d-flex flex-column align-items-center justify-content-center p-4 text-center"
+                >
+                  <h4 class="fw-bold h5 mb-2">Desarrollo</h4>
+                  <p class="small m-0">
+                    Los machos adultos alcanzan con facilidad un peso de entre
+                    800 y 1000 kg, destacando por su rápida tasa de conversión
+                    alimenticia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center">
+            <div class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div
+                  class="flip-card-front bg-white shadow-sm d-flex flex-column align-items-center justify-content-center p-4"
+                >
+                  <i class="bi bi-heart-pulse text-danger display-4 mb-3"></i>
+                  <h4 class="fw-bold h5 text-dark m-0">Facilidad de Parto</h4>
+                </div>
+                <div
+                  class="flip-card-back bg-danger text-white d-flex flex-column align-items-center justify-content-center p-4 text-center"
+                >
+                  <h4 class="fw-bold h5 mb-2">Habilidad Materna</h4>
+                  <p class="small m-0">
+                    Las vacas poseen un canal de parto amplio y crías de tamaño
+                    moderado al nacer, reduciendo casi a cero los problemas
+                    distócicos en el campo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mt-5 pt-5 mb-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <h3 class="fw-bold mb-2 text-dark">
+              Desafío Ganadero: Trivia Angus
+            </h3>
+            <p class="text-muted mb-5">
+              Demostrá tus conocimientos respondiendo estas 5 preguntas
+              interactivas.
+            </p>
+
+            <div class="d-flex flex-column gap-5 text-start">
+              <div class="trivia-container bg-light p-4 rounded-4 shadow-sm">
+                <h4 class="h5 fw-bold text-dark mb-4">
+                  <span class="badge bg-warning text-dark me-2">1</span> ¿Los
+                  toros de raza Angus pura nacen naturalmente con cuernos?
+                </h4>
+                <div class="d-flex flex-column gap-3">
+                  <div class="trivia-option">
+                    <input
+                      type="radio"
+                      id="p1-opcion-falsa"
+                      name="pregunta1"
+                      class="trivia-input-wrong"
+                    />
+                    <label
+                      for="p1-opcion-falsa"
+                      class="trivia-label btn btn-outline-secondary w-100 text-start py-3 px-4 d-flex justify-content-between align-items-center"
+                    >
+                      <span
+                        ><i class="bi bi-circle me-2"></i> Sí, nacen con cuernos
+                        y se les realiza el desmoche.</span
+                      >
+                      <strong class="text-danger result-text"
+                        >¡Incorrecto! <i class="bi bi-x-circle-fill"></i
+                      ></strong>
+                    </label>
+                  </div>
+                  <div class="trivia-option">
+                    <input
+                      type="radio"
+                      id="p1-opcion-correcta"
+                      name="pregunta1"
+                      class="trivia-input-right"
+                    />
+                    <label
+                      for="p1-opcion-correcta"
+                      class="trivia-label btn btn-outline-secondary w-100 text-start py-3 px-4 d-flex justify-content-between align-items-center"
+                    >
+                      <span
+                        ><i class="bi bi-circle me-2"></i> No, son mochos de
+                        nacimiento (no desarrollan cuernos).</span
+                      >
+                      <strong class="text-success result-text"
+                        >¡Correcto! <i class="bi bi-check-circle-fill"></i
+                      ></strong>
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="trivia-feedback mt-4 p-3 bg-white rounded-3 border-start border-4 border-primary"
+                >
+                  <h5 class="h6 fw-bold text-primary mb-1">
+                    <i class="bi bi-info-circle-fill"></i> Explicación
+                  </h5>
+                  <p class="small text-secondary m-0">
+                    La raza Angus es genéticamente mocha. Esta característica es
+                    altamente dominante, lo que simplifica significativamente el
+                    manejo del rodeo en el campo.
+                  </p>
+                </div>
+              </div>
+
+              <div class="trivia-container bg-light p-4 rounded-4 shadow-sm">
+                <h4 class="h5 fw-bold text-dark mb-4">
+                  <span class="badge bg-warning text-dark me-2">2</span> ¿De qué
+                  país es originaria históricamente la raza Angus?
+                </h4>
+                <div class="d-flex flex-column gap-3">
+                  <div class="trivia-option">
+                    <input
+                      type="radio"
+                      id="p2-opcion-correcta"
+                      name="pregunta2"
+                      class="trivia-input-right"
+                    />
+                    <label
+                      for="p2-opcion-correcta"
+                      class="trivia-label btn btn-outline-secondary w-100 text-start py-3 px-4 d-flex justify-content-between align-items-center"
+                    >
+                      <span><i class="bi bi-circle me-2"></i> Escocia.</span>
+                      <strong class="text-success result-text"
+                        >¡Correcto! <i class="bi bi-check-circle-fill"></i
+                      ></strong>
+                    </label>
+                  </div>
+                  <div class="trivia-option">
+                    <input
+                      type="radio"
+                      id="p2-opcion-falsa"
+                      name="pregunta2"
+                      class="trivia-input-wrong"
+                    />
+                    <label
+                      for="p2-opcion-falsa"
+                      class="trivia-label btn btn-outline-secondary w-100 text-start py-3 px-4 d-flex justify-content-between align-items-center"
+                    >
+                      <span
+                        ><i class="bi bi-circle me-2"></i> Estados Unidos.</span
+                      >
+                      <strong class="text-danger result-text"
+                        >¡Incorrecto! <i class="bi bi-x-circle-fill"></i
+                      ></strong>
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="trivia-feedback mt-4 p-3 bg-white rounded-3 border-start border-4 border-success"
+                >
+                  <h5 class="h6 fw-bold text-success mb-1">
+                    <i class="bi bi-info-circle-fill"></i> Explicación
+                  </h5>
+                  <p class="small text-secondary m-0">
+                    Se originó en las regiones montañosas de Aberdeen y Angus,
+                    al noreste de Escocia, donde las duras condiciones
+                    climáticas forjaron su rusticidad.
+                  </p>
+                </div>
+              </div>
+
+              <div class="trivia-container bg-light p-4 rounded-4 shadow-sm">
+                <h4 class="h5 fw-bold text-dark mb-4">
+                  <span class="badge bg-warning text-dark me-2">3</span> ¿Qué es
+                  el "marmoleo" que hace famosa a su carne?
+                </h4>
+                <div class="d-flex flex-column gap-3">
+                  <div class="trivia-option">
+                    <input
+                      type="radio"
+                      id="p3-opcion-falsa"
+                      name="pregunta3"
+                      class="trivia-input-wrong"
+                    />
+                    <label
+                      for="p3-opcion-falsa"
+                      class="trivia-label btn btn-outline-secondary w-100 text-start py-3 px-4 d-flex justify-content-between align-items-center"
+                    >
+                      <span
+                        ><i class="bi bi-circle me-2"></i> La capa de grasa
+                        externa que recubre los cortes.</span
+                      >
+                      <strong class="text-danger result-text"
+                        >¡Incorrecto! <i class="bi bi-x-circle-fill"></i
+                      ></strong>
+                    </label>
+                  </div>
+                  <div class="trivia-option">
+                    <input
+                      type="radio"
+                      id="p3-opcion-correcta"
+                      name="pregunta3"
+                      class="trivia-input-right"
+                    />
+                    <label
+                      for="p3-opcion-correcta"
+                      class="trivia-label btn btn-outline-secondary w-100 text-start py-3 px-4 d-flex justify-content-between align-items-center"
+                    >
+                      <span
+                        ><i class="bi bi-circle me-2"></i> La distribución de
+                        grasa intramuscular dentro del tejido.</span
+                      >
+                      <strong class="text-success result-text"
+                        >¡Correcto! <i class="bi bi-check-circle-fill"></i
+                      ></strong>
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="trivia-feedback mt-4 p-3 bg-white rounded-3 border-start border-4 border-danger"
+                >
+                  <h5 class="h6 fw-bold text-danger mb-1">
+                    <i class="bi bi-info-circle-fill"></i> Explicación
+                  </h5>
+                  <p class="small text-secondary m-0">
+                    El marmoleo refiere a las vetas de grasa interna. Al
+                    derretirse durante la cocción, aportan la jugosidad y
+                    ternura típica de la alta cocina.
+                  </p>
+                </div>
+              </div>
+
+              <div class="trivia-container bg-light p-4 rounded-4 shadow-sm">
+                <h4 class="h5 fw-bold text-dark mb-4">
+                  <span class="badge bg-warning text-dark me-2">4</span>
+                  ¿Existen variedades de pelaje permitidas además del color
+                  negro uniforme?
+                </h4>
+                <div class="d-flex flex-column gap-3">
+                  <div class="trivia-option">
+                    <input
+                      type="radio"
+                      id="p4-opcion-correcta"
+                      name="pregunta4"
+                      class="trivia-input-right"
+                    />
+                    <label
+                      for="p4-opcion-correcta"
+                      class="trivia-label btn btn-outline-secondary w-100 text-start py-3 px-4 d-flex justify-content-between align-items-center"
+                    >
+                      <span
+                        ><i class="bi bi-circle me-2"></i> Sí, el pelaje
+                        colorado (Red Angus) es una variedad pura y
+                        reconocida.</span
+                      >
+                      <strong class="text-success result-text"
+                        >¡Correcto! <i class="bi bi-check-circle-fill"></i
+                      ></strong>
+                    </label>
+                  </div>
+                  <div class="trivia-option">
+                    <input
+                      type="radio"
+                      id="p4-opcion-falsa"
+                      name="pregunta4"
+                      class="trivia-input-wrong"
+                    />
+                    <label
+                      for="p4-opcion-falsa"
+                      class="trivia-label btn btn-outline-secondary w-100 text-start py-3 px-4 d-flex justify-content-between align-items-center"
+                    >
+                      <span
+                        ><i class="bi bi-circle me-2"></i> No, los ejemplares
+                        puros sólo pueden ser completamente negros.</span
+                      >
+                      <strong class="text-danger result-text"
+                        >¡Incorrecto! <i class="bi bi-x-circle-fill"></i
+                      ></strong>
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="trivia-feedback mt-4 p-3 bg-white rounded-3 border-start border-4 border-warning"
+                >
+                  <h5 class="h6 fw-bold text-warning mb-1">
+                    <i class="bi bi-info-circle-fill"></i> Explicación
+                  </h5>
+                  <p class="small text-secondary m-0">
+                    El Red Angus posee las mismas propiedades productivas y de
+                    calidad que el Black Angus; la diferencia radica
+                    exclusivamente en un gen recesivo para el color.
+                  </p>
+                </div>
+              </div>
+
+              <div class="trivia-container bg-light p-4 rounded-4 shadow-sm">
+                <h4 class="h5 fw-bold text-dark mb-4">
+                  <span class="badge bg-warning text-dark me-2">5</span> ¿Por
+                  qué se destaca la eficiencia reproductiva de las vacas Angus?
+                </h4>
+                <div class="d-flex flex-column gap-3">
+                  <div class="trivia-option">
+                    <input
+                      type="radio"
+                      id="p5-opcion-falsa"
+                      name="pregunta5"
+                      class="trivia-input-wrong"
+                    />
+                    <label
+                      for="p5-opcion-falsa"
+                      class="trivia-label btn btn-outline-secondary w-100 text-start py-3 px-4 d-flex justify-content-between align-items-center"
+                    >
+                      <span
+                        ><i class="bi bi-circle me-2"></i> Porque tienen un
+                        período de gestación mucho más corto que otras
+                        razas.</span
+                      >
+                      <strong class="text-danger result-text"
+                        >¡Incorrecto! <i class="bi bi-x-circle-fill"></i
+                      ></strong>
+                    </label>
+                  </div>
+                  <div class="trivia-option">
+                    <input
+                      type="radio"
+                      id="p5-opcion-correcta"
+                      name="pregunta5"
+                      class="trivia-input-right"
+                    />
+                    <label
+                      for="p5-opcion-correcta"
+                      class="trivia-label btn btn-outline-secondary w-100 text-start py-3 px-4 d-flex justify-content-between align-items-center"
+                    >
+                      <span
+                        ><i class="bi bi-circle me-2"></i> Por su alta
+                        fertilidad, longevidad y excelente habilidad
+                        materna.</span
+                      >
+                      <strong class="text-success result-text"
+                        >¡Correcto! <i class="bi bi-check-circle-fill"></i
+                      ></strong>
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="trivia-feedback mt-4 p-3 bg-white rounded-3 border-start border-4 border-info"
+                >
+                  <h5 class="h6 fw-bold text-info mb-1">
+                    <i class="bi bi-info-circle-fill"></i> Explicación
+                  </h5>
+                  <p class="small text-secondary m-0">
+                    Las hembras alcanzan la madurez sexual tempranamente,
+                    producen abundante leche y cuidan muy bien de sus terneros,
+                    asegurando excelentes tasas de destete.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer
