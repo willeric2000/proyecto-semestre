@@ -1,20 +1,166 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cats_everywhere</title>
+    <title>El Gato</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-primary">
+    <nav class="navbar navbar-expand-lg bg-primary py-3">
       <div class="container">
-        <span class="navbar-brand text-white fw-bold"> Nuestra Granja </span>
+        <span class="navbar-brand text-white fw-bold fs-3">
+          Nuestra Granja
+        </span>
+        <div>
+          <a href="index.html" class="btn btn-light">HOME</a>
+        </div>
       </div>
     </nav>
+
+    <div class="container mt-5">
+      <div class="card mx-auto" style="max-width: 800px">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1707353401897-da9ba223f807?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0"
+          class="card-img-top"
+          alt="Gato"
+          style="height: 350px; object-fit: cover"
+        />
+
+        <div class="card-body">
+          <h2 class="card-title">El Gato Doméstico</h2>
+
+          <p class="card-text">
+            Los gatos son animales independientes que llevan conviviendo con los
+            humanos desde hace más de 10.000 años. Originalmente fueron
+            domesticados en el Cercano Oriente, donde ayudaban a controlar las
+            plagas de roedores en los almacenes de grano.
+          </p>
+
+          <p class="card-text">
+            A pesar de su fama de solitarios, son criaturas muy sociales cuando
+            se sienten seguros. Ronronean para comunicar calma y afecto, y
+            tienen una enorme variedad de vocalizaciones que usan
+            específicamente para comunicarse con los humanos.
+          </p>
+
+          <p class="card-text">
+            Son animales de hábitos nocturnos, con una visión nocturna
+            excepcional. Sus pupilas pueden dilatarse ampliamente para captar la
+            mayor cantidad de luz posible, lo que los convierte en cazadores muy
+            eficientes.
+          </p>
+
+          <h4 class="mt-4">Galería</h4>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <img
+                src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600"
+                class="img-fluid rounded"
+                alt="Gato naranja"
+              />
+            </div>
+            <div class="col-md-6">
+              <img
+                src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=600"
+                class="img-fluid rounded"
+                alt="Gato blanco"
+              />
+            </div>
+            <div class="col-md-6">
+              <img
+                src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=600"
+                class="img-fluid rounded"
+                alt="Gato gris"
+              />
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-white pt-5 pb-3 border-top border-secondary">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold mb-3 text-warning">Nuestra Granja</h5>
+            <p class="text-secondary small">
+              Un espacio dedicado a compartir conocimiento, pasión y cuidado por
+              los animales de nuestra región y el mundo.
+            </p>
+            <div class="d-flex gap-3 fs-5 mt-3">
+              <a href="#" class="text-white-50 text-decoration-none"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-white-50 text-decoration-none"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="text-white-50 text-decoration-none"
+                ><i class="bi bi-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 text-md-center">
+            <h5 class="fw-bold mb-3 text-warning">Enlaces rápidos</h5>
+            <ul class="list-unstyled footer-links">
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Inicio</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#cards" class="text-white-50 text-decoration-none"
+                  >Nuestros Amigos</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#colaboradores"
+                  class="text-white-50 text-decoration-none"
+                  >Colaboradores</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <h5 class="fw-bold mb-3 text-warning">Contacto</h5>
+            <ul class="list-unstyled text-white-50 small">
+              <li class="mb-2 d-flex align-items-center gap-2">
+                <i class="bi bi-envelope-fill text-warning"></i>
+                Nuestra.Granja@gmail.com
+              </li>
+              <li class="mb-2 d-flex align-items-center gap-2">
+                <i class="bi bi-geo-alt-fill text-warning"></i> Montevideo,
+                Uruguay
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="border-secondary my-4" />
+
+        <div class="row">
+          <div class="col text-center">
+            <p class="text-secondary small mb-0">
+              &copy; 2026 Nuestra Granja. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>
