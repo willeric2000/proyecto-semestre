@@ -48,5 +48,18 @@ window.volverInicio = function () {
   } else {
     window.location.href = "index.html";
   }
+  
+
+  
+
+
+
+document.querySelectorAll(".img-fluid").forEach((img) => {
+  img.addEventListener("click", () => {
+    img.classList.toggle("zoom");
+  });
+});
+
+
 };
 });
