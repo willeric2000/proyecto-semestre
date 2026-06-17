@@ -61,5 +61,6 @@ document.querySelectorAll(".img-fluid").forEach((img) => {
 });
 
 
+
 };
 });
