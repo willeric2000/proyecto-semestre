@@ -121,7 +121,7 @@
 
       <section class="container mt-5 pt-5">
         <h3 class="text-center fw-bold mb-2 text-dark">
-          Datos Clave de Producción
+          Datos Clave de Production
         </h3>
         <p class="text-center text-muted mb-5">
           Pasa el mouse o presiona las tarjetas para descubrir la información
@@ -518,6 +518,46 @@
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nueva Sección de Comentarios Agregada -->
+      <section class="container mt-5 pt-5 mb-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8">
+            <div class="comentarios bg-light p-4 rounded-4 shadow-sm">
+              <h2 class="titulo h3 fw-bold text-dark mb-4 text-center">
+                Comentarios
+              </h2>
+
+              <form id="formComentarios">
+                <div class="mb-3">
+                  <label class="form-label fw-bold text-dark">Nombre</label>
+                  <input type="text" id="nombre" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-bold text-dark">Comentario</label>
+                  <textarea
+                    id="comentario"
+                    class="form-control"
+                    rows="4"
+                  ></textarea>
+                </div>
+
+                <div class="text-center">
+                  <button
+                    type="submit"
+                    class="btn btn-success fw-bold px-4 py-2 shadow-sm"
+                  >
+                    Publicar comentario
+                  </button>
+                </div>
+              </form>
+
+              <div id="listaComentarios" class="mt-4"></div>
             </div>
           </div>
         </div>
