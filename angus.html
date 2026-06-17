@@ -26,10 +26,10 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-primary py-3 shadow-sm">
       <div class="container">
-        <span class="navbar-brand text-white fw-bold fs-3">Nuestra Granja</span>
+        <span class="navbar-brand text-blac fw-bold fs-3">Nuestra Granja</span>
         <div>
           <a href="index.html" class="btn btn-light fw-bold"
-            >Volver al Inicio</a
+            >HOME</a
           >
         </div>
       </div>
@@ -523,7 +523,11 @@
         </div>
       </section>
 
-      <!-- Nueva Sección de Comentarios Agregada -->
+<section id="contenedor-juego" class="container my-5 pt-5 pb-4 bg-light rounded-4 shadow-sm text-center">
+    <h3 class="fw-bold text-dark mb-2">Juego de Memoria Angus</h3>
+    <p class="text-muted mb-4">Encontrá las parejas de toros y campo.</p>
+    <div class="tablero d-flex flex-wrap justify-content-center gap-2" id="tablero"></div>
+</section>
       <section class="container mt-5 pt-5 mb-5">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8">
@@ -598,5 +602,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="juego.js"></script>
   </body>
 </html>
