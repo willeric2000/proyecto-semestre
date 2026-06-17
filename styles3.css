@@ -169,3 +169,18 @@ body {
   opacity: 1;
   margin-top: 1.5rem !important;
 }
+
+.comentarios {
+  background: white;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.comentario {
+  background: #e8f5e9;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 15px;
+  border-left: 6px solid #2e7d32;
+}
