@@ -10,7 +10,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles4.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-primary py-3">
@@ -89,6 +89,31 @@
         </div>
       </div>
     </div>
+    <section class="seccion">
+      <div class="container">
+        <div class="comentarios">
+          <h2 class="titulo">Comentarios</h2>
+
+          <form id="formComentarios">
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <input type="text" id="nombre" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Comentario</label>
+              <textarea id="comentario" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success">
+              Publicar comentario
+            </button>
+          </form>
+
+          <div id="listaComentarios" class="mt-4"></div>
+        </div>
+      </div>
+    </section>
     <footer class="bg-dark text-white pt-5 pb-3 border-top border-secondary">
       <div class="container">
         <div class="row g-4">
