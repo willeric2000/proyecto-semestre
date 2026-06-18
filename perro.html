@@ -18,7 +18,7 @@
           Nuestra Granja
         </span>
         <div>
-          <a href="./index.html" class="btn btn-primary fw-bold ">HOME</a>
+          <a href="./index.html" class="btn btn-primary fw-bold">HOME</a>
         </div>
       </div>
     </nav>
@@ -126,6 +126,24 @@
         </div>
       </div>
     </div>
+    <div class="card mt-5 p-4 text-center">
+      <h3>🎮 Adiviná el Número</h3>
+
+      <p>Estoy pensando en un número del 1 al 10.</p>
+
+      <input
+        type="number"
+        id="numero"
+        class="form-control mb-3"
+        min="1"
+        max="10"
+        placeholder="Escribí un número"
+      />
+
+      <button class="btn btn-success" onclick="adivinar()">Intentar</button>
+
+      <p id="resultado" class="mt-3 fw-bold"></p>
+    </div>
     <footer class="bg-dark text-white pt-5 pb-3 border-top border-secondary">
       <div class="container">
         <div class="row g-4">
@@ -227,5 +245,6 @@
         });
     </script>
     <script src="app.js"></script>
+    <script src="perro.js"></script>
   </body>
 </html>
