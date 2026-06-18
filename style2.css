@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgb() !important;
+  background-color: rgb(91, 91, 242) !important;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
   animation: slideDown 0.8s ease;
 }
@@ -14,6 +14,7 @@
 
 .navbar .btn {
   transition: all 0.3s ease;
+color: black
 }
 
 .navbar .btn:hover {
@@ -140,4 +141,11 @@ h1::after {
 }
 .card {
   background-color: #bbe7f8;
+}
+.comentarios {
+  margin: 50px;
+  background: rgb(140, 224, 232);
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
