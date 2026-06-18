@@ -49,7 +49,7 @@ body {
 
 .card-img-container {
   width: 100%;
-  height: 220px; /* ALTURA FIJA,FUNCIONA Y NO SE TOCA, COSAS DE CSS XD */
+  height: 220px; /* ALTURA FIJA, FUNCIONA Y NO SE TOCA, COSAS DE CSS XD */
   overflow: hidden;
   background-color: #eaeaea;
 }
@@ -170,8 +170,33 @@ body {
   margin-top: 1.5rem !important;
 }
 
+#contenedor-juego .tablero {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+#contenedor-juego .carta {
+  width: 90px;
+  height: 90px;
+  background: #333;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+#contenedor-juego .carta.volteada {
+  background: #fff;
+  color: #000;
+  border: 2px solid #212529;
+}
+
 .comentarios {
-  background: white;
+  background-color: #ffffff;
   padding: 35px;
   border-radius: 25px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -183,27 +208,4 @@ body {
   border-radius: 15px;
   margin-top: 15px;
   border-left: 6px solid #2e7d32;
-}
-
-#contenedor-juego .tablero {
-    max-width: 550px;
-    margin: 0 auto;
-}
-#contenedor-juego .carta {
-    width: 90px;
-    height: 90px;
-    background: #333;
-    color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 35px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.2s;
-}
-#contenedor-juego .carta.volteada {
-    background: #fff;
-    color: #000;
-    border: 2px solid #212529;
 }
