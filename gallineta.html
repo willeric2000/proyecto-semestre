@@ -188,6 +188,28 @@
           padding: 25px;
         }
       }
+     .gallineta-animada {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    font-size: 60px;
+    z-index: 9999;
+    animation: volargallineta 2s ease-out;
+}
+
+@keyframes volargallineta {
+    0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-300px) translateY(-200px);
+        opacity: 0;
+    }
+}
+
+  
     </style>
   </head>
 
@@ -334,7 +356,7 @@
 
       <section class="seccion">
         <div class="container">
-          <h2 class="titulo">Galería interactiva</h2>
+          <h2 class="titulo">Observatorio</h2>
 
           <img
             id="imagenGrande"
@@ -374,7 +396,7 @@
       <section class="seccion">
         <div class="container">
           <div class="quiz">
-            <h2 class="titulo">Quiz interactivo</h2>
+            <h2 class="titulo">Misión Gallineta</h2>
             <p class="text-center">
               Respondé las preguntas y comprobá cuánto aprendiste.
             </p>
@@ -432,6 +454,8 @@
                 Ver resultado
               </button>
               <p id="resultadoQuiz" class="fs-4 fw-bold mt-3"></p>
+  
+</div>
             </div>
           </div>
         </div>
@@ -552,6 +576,7 @@
 
         if (esCorrecta) {
           puntos++;
+          mostrarGallineta();
           boton.classList.remove("btn-outline-success");
           boton.classList.add("btn-success");
         } else {
@@ -601,6 +626,27 @@
           document.querySelector("#nombre").value = "";
           document.querySelector("#comentario").value = "";
         });
+        document.querySelector("#comentario").value = "";
+
+
+
+function mostrarGallineta() {
+
+    const gallineta = document.createElement("div");
+
+    gallineta.innerHTML = "🌿";
+    gallineta.className = "gallineta-animada";
+
+    document.body.appendChild(gallineta);
+
+    gallineta.style.display = "block";
+
+    setTimeout(() => {
+        gallineta.remove();
+    }, 2000);
+}
+
+</script>
     </script>
   </body>
 </html>
