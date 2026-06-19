@@ -220,12 +220,24 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">Blog de Animales</a>
-        <a class="btn btn-light" href="index.html">Volver al inicio</a>
-      </div>
-    </nav>
+   <nav class="navbar navbar-expand-lg py-3"
+     style="background-color: rgb(240, 240, 217);">
+
+    <div class="container">
+
+        <a class="navbar-brand text-black fw-bold fs-3"
+           href="index.html">
+            Nuestra Granja
+        </a>
+
+        <a class="btn btn-light rounded-pill px-4 fw-bold"
+           href="index.html">
+            HOME
+        </a>
+
+    </div>
+
+</nav>
 
     <header class="hero">
       <div class="hero-caja">
@@ -494,8 +506,76 @@
       </section>
     </main>
 
-    <footer>
-      <p>Proyecto Final Front-End | Gallineta de Monte | Viviana Ciccariello</p>
+    <footer class="bg-dark text-white pt-5 pb-3 border-top border-secondary">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold mb-3 text-warning">Nuestra Granja</h5>
+            <p class="text-secondary small">
+              Un espacio dedicado a compartir conocimiento, pasión y cuidado por
+              los animales de nuestra región y el mundo.
+            </p>
+            <div class="d-flex gap-3 fs-5 mt-3">
+              <a href="#" class="text-white-50 text-decoration-none"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-white-50 text-decoration-none"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="text-white-50 text-decoration-none"
+                ><i class="bi bi-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 text-md-center">
+            <h5 class="fw-bold mb-3 text-warning">Enlaces rápidos</h5>
+            <ul class="list-unstyled footer-links">
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Inicio</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#cards" class="text-white-50 text-decoration-none"
+                  >Nuestros Amigos</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#colaboradores"
+                  class="text-white-50 text-decoration-none"
+                  >Colaboradores</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <h5 class="fw-bold mb-3 text-warning">Contacto</h5>
+            <ul class="list-unstyled text-white-50 small">
+              <li class="mb-2 d-flex align-items-center gap-2">
+                <i class="bi bi-envelope-fill text-warning"></i>
+                Nuestra.Granja@gmail.com
+              </li>
+              <li class="mb-2 d-flex align-items-center gap-2">
+                <i class="bi bi-geo-alt-fill text-warning"></i> Montevideo,
+                Uruguay
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="border-secondary my-4" />
+
+        <div class="row">
+          <div class="col text-center">
+            <p class="text-secondary small mb-0">
+              &copy; 2026 Nuestra Granja. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script>
