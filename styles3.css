@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgb(238, 238, 215) !important;
+  background-color: rgb(199, 199, 191) !important;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
   animation: slideDown 0.8s ease;
 }
@@ -22,7 +22,7 @@
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #eff9b5;
+  background-color: #ebede2;
 }
 
 .main-title {
