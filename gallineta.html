@@ -17,6 +17,12 @@
         box-sizing: border-box;
       }
 
+      .navbar {
+        background-color: #2e7d32 !important;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+        animation: slideDown 0.8s ease;
+      }
+
       body {
         font-family: Arial, sans-serif;
         background: #eaf7df;
@@ -194,36 +200,39 @@
           padding: 25px;
         }
       }
-     .gallineta-animada {
-    position: fixed;
-    right: 20px;
-    bottom: 100px;
-    font-size: 60px;
-    z-index: 9999;
-    animation: volargallineta 2s ease-out;
-}
 
-@keyframes volargallineta {
-    0% {
-        transform: translateX(0) translateY(0);
-        opacity: 1;
-    }
+      .gallineta-animada {
+        position: fixed;
+        right: 20px;
+        bottom: 100px;
+        font-size: 60px;
+        z-index: 9999;
+        animation: volargallineta 2s ease-out;
+      }
 
-    100% {
-        transform: translateX(-300px) translateY(-200px);
-        opacity: 0;
-    }
-}
+      @keyframes volargallineta {
+        0% {
+          transform: translateX(0) translateY(0);
+          opacity: 1;
+        }
 
-  
+        100% {
+          transform: translateX(-300px) translateY(-200px);
+          opacity: 0;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+    <nav class="navbar navbar-expand-lg bg-primary py-3">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">Blog de Animales</a>
-        <a class="btn btn-light" href="index.html">Volver al inicio</a>
+        <span class="navbar-brand text-black fw-bold fs-3">
+          Nuestra Granja
+        </span>
+        <div>
+          <a href="#" class="btn btn-light fw-bold">HOME</a>
+        </div>
       </div>
     </nav>
 
@@ -460,8 +469,6 @@
                 Ver resultado
               </button>
               <p id="resultadoQuiz" class="fs-4 fw-bold mt-3"></p>
-  
-</div>
             </div>
           </div>
         </div>
@@ -494,8 +501,76 @@
       </section>
     </main>
 
-    <footer>
-      <p>Proyecto Final Front-End | Gallineta de Monte | Viviana Ciccariello</p>
+    <footer class="bg-dark text-white pt-5 pb-3 border-top border-secondary">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold mb-3 text-warning">Nuestra Granja</h5>
+            <p class="text-secondary small">
+              Un espacio dedicado a compartir conocimiento, pasión y cuidado por
+              los animales de nuestra región y el mundo.
+            </p>
+            <div class="d-flex gap-3 fs-5 mt-3">
+              <a href="#" class="text-white-50 text-decoration-none"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-white-50 text-decoration-none"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="text-white-50 text-decoration-none"
+                ><i class="bi bi-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 text-md-center">
+            <h5 class="fw-bold mb-3 text-warning">Enlaces rápidos</h5>
+            <ul class="list-unstyled footer-links">
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Inicio</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#cards" class="text-white-50 text-decoration-none"
+                  >Nuestros Amigos</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#colaboradores"
+                  class="text-white-50 text-decoration-none"
+                  >Colaboradores</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <h5 class="fw-bold mb-3 text-warning">Contacto</h5>
+            <ul class="list-unstyled text-white-50 small">
+              <li class="mb-2 d-flex align-items-center gap-2">
+                <i class="bi bi-envelope-fill text-warning"></i>
+                Nuestra.Granja@gmail.com
+              </li>
+              <li class="mb-2 d-flex align-items-center gap-2">
+                <i class="bi bi-geo-alt-fill text-warning"></i> Montevideo,
+                Uruguay
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="border-secondary my-4" />
+
+        <div class="row">
+          <div class="col text-center">
+            <p class="text-secondary small mb-0">
+              &copy; 2026 Nuestra Granja. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script>
@@ -556,36 +631,27 @@
           nuevoComentario.classList.add("comentario");
 
           nuevoComentario.innerHTML = `
-        <h5>${nombre}</h5>
-        <p>${comentario}</p>
-      `;
+            <h5>${nombre}</h5>
+            <p>${comentario}</p>
+          `;
 
           lista.appendChild(nuevoComentario);
 
           document.querySelector("#nombre").value = "";
           document.querySelector("#comentario").value = "";
         });
-        document.querySelector("#comentario").value = "";
 
+      function mostrarGallineta() {
+        const gallineta = document.createElement("div");
+        gallineta.innerHTML = "🌿";
+        gallineta.className = "gallineta-animada";
 
+        document.body.appendChild(gallineta);
 
-function mostrarGallineta() {
-
-    const gallineta = document.createElement("div");
-
-    gallineta.innerHTML = "🌿";
-    gallineta.className = "gallineta-animada";
-
-    document.body.appendChild(gallineta);
-
-    gallineta.style.display = "block";
-
-    setTimeout(() => {
-        gallineta.remove();
-    }, 2000);
-}
-
-</script>
+        setTimeout(() => {
+          gallineta.remove();
+        }, 2000);
+      }
     </script>
   </body>
 </html>
